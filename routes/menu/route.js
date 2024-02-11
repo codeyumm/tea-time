@@ -12,7 +12,7 @@ let router = express.Router();
 // /menu/
 router.route("/").get( (request, response) => {
 
-    response.status(200).send("menu page");
+    response.status(200).render("menu/menu")
 
 } );
 
