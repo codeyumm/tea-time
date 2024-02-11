@@ -1,1 +1,15 @@
 extends ../shared/layout
+
+block append styleSheets
+    link(rel="stylesheet", href="/css/index.css")
+
+block main-content
+    main.content-wrapper
+        .hero-text
+            h1 Tea Time
+            p We don't want people to have just 'a' Chai;
+            p we want people to have 'THE' Chai.
+
+        .hero-image
+            .bg-block
+            img(src="/images/hero-tea-cup.png", alt="Image of tea", title="Blue cup of tea with chai in it")

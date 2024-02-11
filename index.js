@@ -10,6 +10,10 @@ const app = express();
 // set port for the server
 const port = process.env.PORT || "8888";
 
+
+
+
+
 // set path for views
 app.set("views", path.join(__dirname, "views"));
 
@@ -18,6 +22,10 @@ app.use(express.static(path.join(__dirname, "public")))
 
 // set template engine
 app.set("view engine", "pug");
+
+
+
+
 
 // getting all routes filed
 
@@ -29,6 +37,10 @@ const adminRoutes = require('./routes/admin/route')
 
 // get the routes for the index
 const indexRoutes = require('./routes/index/route')
+
+
+
+
 
 // use the  menu/route.js file to handle
 // reuqest which starts with /menu
@@ -43,6 +55,10 @@ app.use("/admin", adminRoutes);
 // use the index/route.js file to handle
 // request which starts with /
 app.use("/", indexRoutes);
+
+
+
+
 
 
 // start app to listen for request
