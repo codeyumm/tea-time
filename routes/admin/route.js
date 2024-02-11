@@ -8,7 +8,7 @@ let router = express.Router();
 // route for - /admin
 router.route("/").get( (request, response) => {
 
-    response.send("admin dasboard");
+    response.render("admin/dashboard");
 
 })
 
@@ -17,7 +17,7 @@ router.route("/").get( (request, response) => {
 // route for - /admin/add-products
 router.route("/add-product").get( (request, response) => {
 
-    response.send("add product for admin");
+    response.render("admin/add-product");
 
 })
 
