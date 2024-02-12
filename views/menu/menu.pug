@@ -1,5 +1,87 @@
 extends ../shared/layout
 
+block append styleSheets
+    link(rel="stylesheet", href="/css/menu.css")
+
+
 block main-content
-    main
+    main.content-wrapper
         h1 Menu
+
+        .menu-item-container
+
+            h2.menu-item-title Hot Tea
+
+            .items-container
+                .item-container
+                    img(src="/images/tea-one.jpg", alt="", srcset="").item-image
+                    h3.item-title Masala Chai
+                    p.item-desc Chai made with Indian spieces, milk and ginger
+                    p.item-price $2.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/tea-two.jpg", alt="", srcset="").item-image
+                    h3.item-title Kesar Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $3.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/tea-three.jpg", alt="", srcset="").item-image
+                    h3.item-title Elachi Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $2.5   
+                    //- a(href="#") See more 
+
+            h2.menu-item-title Ice tea
+
+            .items-container.ice-tea-container
+                .item-container
+                    img(src="/images/ice-tea-one.jpg", alt="", srcset="").item-image
+                    h3.item-title Lemon Ice Tea
+                    p.item-desc Simple lemon ice tea
+                    p.item-price $2.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+                    h3.item-title Kesar Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $3.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+                    h3.item-title Elachi Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $2.5   
+                    //- a(href="#") See more 
+
+
+            h2.menu-item-title Snacks
+
+            .items-container.ice-tea-container
+                .item-container
+                    img(src="/images/hot-snack-samosa.jpg", alt="", srcset="").item-image
+                    h3.item-title Samosa
+                    p.item-desc Samosa with filling of potato and peas.
+                    p.item-price $2.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+                    h3.item-title Kesar Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $3.5
+                    //- a(href="#") See more
+                .item-container
+                    img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+                    h3.item-title Elachi Chai
+                    p.item-desc Chai made with milk and kesar
+                    p.item-price $2.5   
+                    //- a(href="#") See more 
+        
+//- Photo by <a href="https://unsplash.com/@picoftasty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mae Mu</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-tea-kbch-i63YTg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+//- Photo by <a href="https://unsplash.com/@trine?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Katrin Hauf</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-sliced-lemon-weB2PvbQrnY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+//- Photo by <a href="https://unsplash.com/@jaydensimm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jayden Sim</a> on <a href="https://unsplash.com/photos/cup-of-ice-cream-OINDTAHGjrc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+//- Photo by <a href="https://unsplash.com/@sundaymonday_gurung?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sanju M Gurung</a> on <a href="https://unsplash.com/photos/person-holding-brown-bread-with-brown-cream-RpodKouwdCM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  

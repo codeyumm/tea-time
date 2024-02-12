@@ -20,7 +20,7 @@ main{
 
 .hero-text p{
     font-weight: 400;
-    font-size: 2.25em;
+    font-size: 2em;
 }
 
 .hero-image{
@@ -61,25 +61,5 @@ main{
     color: var(--secondary-text);
 }
 
-.items-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 80px;
-}
 
-.item-container{
-    max-width: 320px;
-}
-
-.item-title{
-    font-size: 1.5em;
-    letter-spacing: 1.5px;
-    color: #FFFFFF;
-}
-.item-image{
-    height: 320px;
-    width: 200px;
-    border-radius: 12px;
-}
 
