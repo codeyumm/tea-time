@@ -164,5 +164,171 @@ footer p{
 }
 
 
+/* 7. style for index page  */
+#index{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.hero-text{
+    color: var(--primary-text);
+}
+
+.hero-text h1{
+    font-family: 'Playfair display', monospace;
+    font-size: 6em;
+}
+
+.hero-text p{
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.hero-image{
+    height: 100%;
+    position: relative;
+}
+
+.bg-block{
+    background-color: var(--primary-color);
+    
+    height: 100%;
+    width: 380px;
+    position: relative;
+}
+
+.hero-image img{
+    height: 460px;
+    width: 460px;
+    position: absolute;
+    top: 22%;
+    right: 40%;
+}
+
+.hero-text input{
+    margin-top: 24px;
+}
+
+/* Style for main section of index */
+#popular-items{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px;
+}
+
+.section-heading{
+    font-size: 1.8em;
+    font-family: 'Playfair display', monospace;
+    color: var(--secondary-text);
+}
+
+/* 8. Style for menu page */
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    background-color: #e9f1f2;
+}
+
+#menu h1, #menu h2{
+    color: var(--primary-text);
+    font-family: "Playfair display", monospace;
+}
+
+#menu h1{
+    font-size: 2.2em;
+}
+
+#menu h2{
+    font-size: 2em;
+}
 
 
+.menu-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 24px;
+    padding: 0px 12px;
+}
+
+.menu-item-container h3{
+    color: #452915;
+}
+
+.menu-item-container p{
+    color: #593A28;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+
+
+
+
+/* 9. Dashboard style */
+#dashboard{
+    height: 80vh;
+    
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: #e9f1f2;
+}
+
+#dashboard h1{
+    color: var(--primary-text);
+}
+
+
+
+.add-item-container input{
+    width: fit-content;
+}
+
+
+/* 10. add-product page style */
+#add-item{
+    background-color: #e9f1f2;
+    height: 80vh;
+}
+
+#add-item h1{
+    color: var(--primary-text);
+    padding: 60px 24px;
+}
+
+#add-item-form{
+    padding: 0px 48px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    min-width: 400px;
+    max-width: 620px;
+}
+
+#add-itme-form label{
+    max-width: 200px;
+}
+
+#add-item-form select{
+    height: fit-content;
+    padding: 2px 2px;
+}
+
+.input-field-container{
+    display: flex;
+    gap: 12px;
+}
+
+.input-field-container label{
+    width: 120px;
+}

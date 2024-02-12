@@ -1,5 +1,39 @@
 extends ../shared/layout
 
 block main-content
-    main
-        h1 Add product from here
+    main#add-item.content-wrapper
+    
+        h1 Add item to menu
+
+        form#add-item-form(action="", method="POST")
+
+            .input-field-container
+                label(for="itemTitle") item Title : 
+                input(type='text', name='itemTitle', id='itemTitle')
+
+            .input-field-container
+                label(for="itemDesc") Description : 
+                textarea(name="itemDesc", cols="30", rows="3", id='itemDesc') 
+                //- input(type='text', name='itemDesc', id='itemDesc') 
+
+            .input-field-container
+                label(for="itemPrice") Price : 
+                input(type='text', name='itemPrice', id='itemPrice')
+                
+            .input-field-container
+                label(for="itemCategory") Add category
+                select(name="itemCategory", id="itemCategory")
+                    option(value="Hot tea") Hot Tea 
+                    option(value="Ice tea") Ice Tea
+                    option(value="Snacks") Snacks
+
+            
+            .input-field-container
+                label(for="popularItem") Add to popular list?
+                select(name="popularItem", id="popularItem")
+                    option(value="No") No 
+                    option(value="Yes") Yes
+
+            .input-field-container
+                input(type="submit", value="Add item to menu")
+
