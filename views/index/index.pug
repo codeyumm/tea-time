@@ -1,12 +1,13 @@
 extends ../shared/layout
 
 block append styleSheets
-    link(rel="stylesheet", href="/css/index.css")
+
 
 block main-content
     main.content-wrapper#index
         .hero-text
             h1 Tea Time
+            img(src="/images/hero-tea-cup.png", alt="Image of tea", title="Blue cup of tea with chai in it").img-small-screen
             p We don't want people to have just 'a'
             p Chai; we want people to have 'THE' Chai.
             form(action="/menu", method="get")
@@ -20,7 +21,7 @@ block main-content
         
     section#popular-items.content-wrapper
         .section-heading
-            h2 Popular items
+            h2#sec-heading Popular items
         .items-container
             .item-container
                 img(src="/images/tea-one.jpg", alt="", srcset="").item-image
