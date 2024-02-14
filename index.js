@@ -16,6 +16,8 @@ const port = process.env.PORT || "8888";
 // set path for views
 app.set("views", path.join(__dirname, "views"));
 
+// app.set("controllers", path.join(__dirname, "controllers"));
+
 // set path for static file like css,js amd images
 app.use(express.static(path.join(__dirname, "public")))
 
