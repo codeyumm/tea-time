@@ -1,5 +1,5 @@
 const express = require("express");
-
+const db = require('../../controllers/database/db');
 // create router object
 let router = express.Router();
 
@@ -12,6 +12,10 @@ let router = express.Router();
 // /menu/
 router.route("/").get( (request, response) => {
 
+
+
+    db();
+    
     response.status(200).render("menu/menu")
 
 } );

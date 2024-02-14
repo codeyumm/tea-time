@@ -1,6 +1,8 @@
 // get express module
 const express = require('express');
 
+const dotenv = require('dotenv').config();
+
 // get path module - it helps to deal with file path
 const path = require('path');
 
@@ -9,7 +11,6 @@ const app = express();
 
 // set port for the server
 const port = process.env.PORT || "8888";
-
 
 
 // set path for views
@@ -22,8 +23,6 @@ app.use(express.static(path.join(__dirname, "public")))
 app.set("view engine", "pug");
 
 
-
-
 // getting all routes filed
 
 //get the routes for the menu
@@ -34,7 +33,6 @@ const adminRoutes = require('./routes/admin/route')
 
 // get the routes for the index
 const indexRoutes = require('./routes/index/route')
-
 
 
 
@@ -52,9 +50,6 @@ app.use("/admin", adminRoutes);
 // use the index/route.js file to handle
 // request which starts with /
 app.use("/", indexRoutes);
-
-
-
 
 
 
