@@ -7,6 +7,7 @@ const { MongoClient } = require("mongodb");
 // function to get all items from database
 async function getItems(){
 
+    // connect to database
     let db = await connection();
 
     let result = await db.collection('items').find({});
@@ -20,6 +21,7 @@ async function getItems(){
 // function to get all hot tea from database
 async function getHotTea(){
 
+    // connect to database
     let db = await connection();
 
     let result = await db.collection('items').find({ category: "Hot tea"});
@@ -33,6 +35,7 @@ async function getHotTea(){
 // function get all iced tea from database
 async function getIcedTea(){
 
+    // connect to database
     let db = await connection();
 
     let result = await db.collection('items').find({ category: "Hot tea"});
@@ -44,6 +47,7 @@ async function getIcedTea(){
 // function get all snacks item from database
 async function getSnacks(){
 
+    // connect to database
     let db = await connection();
 
     let result = await db.collection('items').find({ category: "Snacks"})
@@ -57,6 +61,7 @@ async function getSnacks(){
 // function get all popular items from database
 async function getPopularItems(){
 
+    // connect to database
     let db = await connection();
 
     let result = await db.collection('items').find({ isPopular: true });
@@ -65,6 +70,35 @@ async function getPopularItems(){
     return res;
 }
 
+// function to get all category of menu
+async function getAllCategory(){
+
+    // connect to database
+    let db = await connection();
+
+    // perform query on database and store the result
+    let result = await db.collection('category').find( {} );
+
+    // convert reult into the array
+    let res = await result.toArray();
+
+    return res;
+}
+
+// function get items by category
+async function getItemsByCategory(category){
+
+    // connect to database
+    let db = await connection();
+
+    // perform query on database and store the result
+    let result = await db.collection('items').find( {category: category});
+
+    // convert result into the array
+    let res = await result.toArray();
+
+    return res;
+}
 
 
 module.exports = { 
@@ -72,7 +106,10 @@ module.exports = {
                     getPopularItems, 
                     getHotTea, 
                     getIcedTea, 
-                    getSnacks 
+                    getSnacks,
+                    getAllCategory,
+                    getItemsByCategory
+                    
                 };
 
 

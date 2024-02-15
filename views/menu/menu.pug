@@ -6,72 +6,88 @@ block main-content
         h1 Menu
  
         .menu-item-container
+            
+            - let c = 0;
+            each category in categories
+                h2.menu-item-title #{category.name}
+                - let x = itemsByCategory[category.name]
 
-            h2.menu-item-title Hot Tea
-
-            .items-container
-                .item-container
-                    img(src="/images/tea-one.jpg", alt="", srcset="").item-image
-                    h3.item-title Masala Chai
-                    p.item-desc Chai made with Indian spieces, milk and ginger
-                    p.item-price $2.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/tea-two.jpg", alt="", srcset="").item-image
-                    h3.item-title Kesar Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $3.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/tea-three.jpg", alt="", srcset="").item-image
-                    h3.item-title Elachi Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $2.5   
-                    //- a(href="#") See more 
-
-            h2.menu-item-title Ice tea
-
-            .items-container.ice-tea-container
-                .item-container
-                    img(src="/images/ice-tea-one.jpg", alt="", srcset="").item-image
-                    h3.item-title Lemon Ice Tea
-                    p.item-desc Simple lemon ice tea
-                    p.item-price $2.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
-                    h3.item-title Kesar Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $3.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
-                    h3.item-title Elachi Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $2.5   
-                    //- a(href="#") See more 
+                .items-container
+                    each i in x
+                        .item-container
+                            img(src=i.image, alt="", srcset="").item-image
+                            h3.item-title #{i.title}
+                            p.item-desc #{i.description}
+                            p.item-price #{i.price}
+                
+            
 
 
-            h2.menu-item-title Snacks
+            //- h2.menu-item-title Hot Tea
 
-            .items-container.ice-tea-container
-                .item-container
-                    img(src="/images/hot-snack-samosa.jpg", alt="", srcset="").item-image
-                    h3.item-title Samosa
-                    p.item-desc Samosa with filling of potato and peas.
-                    p.item-price $2.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
-                    h3.item-title Kesar Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $3.5
-                    //- a(href="#") See more
-                .item-container
-                    img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
-                    h3.item-title Elachi Chai
-                    p.item-desc Chai made with milk and kesar
-                    p.item-price $2.5   
+            //- .items-container
+            //-     .item-container
+            //-         img(src="/images/tea-one.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Masala Chai
+            //-         p.item-desc Chai made with Indian spieces, milk and ginger
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
+            //-         //- a(href="#") See more 
+
+            //- h2.menu-item-title Ice tea
+
+            //- .items-container.ice-tea-container
+            //-     .item-container
+            //-         img(src="/images/ice-tea-one.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Lemon Ice Tea
+            //-         p.item-desc Simple lemon ice tea
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
+            //-         //- a(href="#") See more 
+
+
+            //- h2.menu-item-title Snacks
+
+            //- .items-container.ice-tea-container
+            //-     .item-container
+            //-         img(src="/images/hot-snack-samosa.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Samosa
+            //-         p.item-desc Samosa with filling of potato and peas.
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
                     //- a(href="#") See more 
         
 //- Photo by <a href="https://unsplash.com/@picoftasty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mae Mu</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-tea-kbch-i63YTg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -82,3 +98,6 @@ block main-content
 
 //- Photo by <a href="https://unsplash.com/@sundaymonday_gurung?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sanju M Gurung</a> on <a href="https://unsplash.com/photos/person-holding-brown-bread-with-brown-cream-RpodKouwdCM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
+
+
+//- <img class="item-image" src="https://unsplash.com/photos/clear-drinking-glass-with-sliced-lemon-weB2PvbQrnY?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" alt="" srcset="">
