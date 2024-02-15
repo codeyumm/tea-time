@@ -156,7 +156,7 @@ footer p{
 /* 6. Style which is used by multiple pages */
 .items-container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     gap: 80px;
 }
@@ -230,12 +230,17 @@ footer p{
     margin-top: 24px;
 }
 
+.popular-items-container{
+    justify-content: center;
+}
+
 /* Style for main section of index */
 #popular-items{
     display: flex;
     flex-direction: column;
     padding: 80px 20px;
 }
+
 
 .section-heading{
     font-size: 1.8em;
@@ -354,6 +359,43 @@ footer p{
 
 /* media queries */
 
+/* for hero image and text only */
+@media all  and (min-width: 780px)  and (max-width: 1200px){ 
+    .hero-text h1{
+        font-family: 'Playfair display', monospace;
+        font-size: 5em;
+    }
+    
+    .hero-text p{
+        font-weight: 400;
+        font-size: 1.6em;
+    }
+
+    .hero-text{
+        margin-left: 20px;
+    }
+    .hero-image img{
+        height: 360px;
+        width: 360px;
+        position: absolute;
+        top: 22%;
+        right: 10%;
+    }
+
+    .bg-block{
+        background-color: var(--primary-color);
+        
+        height: 100%;
+        width: 240px;
+        position: relative;
+    }
+
+    .hero-image{
+        height: 100%;
+        position: relative;
+    }
+}
+
 /* for tablet */
 
 @media all  and (max-width: 768px) { 
@@ -409,6 +451,10 @@ footer p{
         width: 100%;
         text-align: center;
         color: white !important;
+    }
+
+    .items-container{
+        justify-content: center;
     }
 
     .item-container{

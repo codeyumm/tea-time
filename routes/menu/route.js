@@ -22,7 +22,6 @@ router.route("/").get( async(request, response) => {
         itemsByCategory[category.name] = result;
     }
 
-    console.log(itemsByCategory);
     
     // for( let i=0; i<categories.length; i++){
 

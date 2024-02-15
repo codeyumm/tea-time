@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, "public")))
 // set template engine
 app.set("view engine", "pug");
 
+app.use(express.urlencoded( {extended: true} ));
+app.use(express.json());
 
 // getting all routes filed
 
@@ -34,7 +36,8 @@ const menuRoutes = require('./routes/menu/route');
 const adminRoutes = require('./routes/admin/route')
 
 // get the routes for the index
-const indexRoutes = require('./routes/index/route')
+const indexRoutes = require('./routes/index/route');
+const exp = require('constants');
 
 
 
